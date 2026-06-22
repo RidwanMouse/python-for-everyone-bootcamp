@@ -58,7 +58,7 @@ Library Management System
 7. Exit
 
 
-## Example Workflow
+##  Workflow
 
 1. Add a new book.
 2. View all available books.
@@ -77,4 +77,9 @@ Library Management System
 - Menu-Driven Programs
 
 
+# Author
+Hodon maxamed ibraahim
+
+## The project link
+https://github.com/Hodman25/library-project
 

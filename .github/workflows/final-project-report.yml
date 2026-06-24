@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   generate-report:
@@ -38,15 +38,3 @@ jobs:
         with:
           name: final-project-report
           path: submissions/FINAL_PROJECT_REPORT.md
-
-      - name: Commit report if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain submissions/FINAL_PROJECT_REPORT.md)" ]; then
-            git add submissions/FINAL_PROJECT_REPORT.md
-            git commit -m "chore: update final project report [skip ci]"
-            git push
-          else
-            echo "Warbixintu wax isbeddel ah ma lahan — lama commit gareeyn."
-          fi

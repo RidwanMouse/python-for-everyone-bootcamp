@@ -1,3 +1,4 @@
+import os
 from models.inventory import Product
 
 
@@ -9,7 +10,6 @@ def load_products(path, inventory):
 
                 if line:
                     name, quantity = line.split("|")
-
                     product = Product(name, int(quantity))
                     inventory.add_product(product)
 
@@ -18,6 +18,9 @@ def load_products(path, inventory):
 
 
 def save_products(path, inventory):
+    # ✅ ensure folder exists before saving
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
     with open(path, "w", encoding="utf-8") as file:
         for product in inventory.products:
             file.write(f"{product.name}|{product.quantity}\n")

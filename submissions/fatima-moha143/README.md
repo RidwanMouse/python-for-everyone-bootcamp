@@ -5,7 +5,7 @@ Overview
 Inventory Stock Management System is a Python application that helps users manage product inventory efficiently. The system allows users to add, update, search, view, and remove products while storing inventory information for future use.
 
 Features
-
+gi
 * Add new products
 * View inventory items
 * Update product information
